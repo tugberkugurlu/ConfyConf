@@ -65,6 +65,10 @@
       <Project>{34b1c1a9-7571-4c61-8414-4434c6a98a64}</Project>
       <Name>ConfyConf.Commands</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ConfyConf.Domain.InMemory\ConfyConf.Domain.InMemory.csproj">
+      <Project>{5549BBC2-E11D-4D8F-ABF7-F7F544B03964}</Project>
+      <Name>ConfyConf.Domain.InMemory</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConfyConf.Domain\ConfyConf.Domain.csproj">
       <Project>{6ecdff42-4448-4ec9-9aab-d07b3d7a3320}</Project>
       <Name>ConfyConf.Domain</Name>

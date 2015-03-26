@@ -15,6 +15,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfyConf.EventStore", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfyConf.UserInterface.Console", "src\ConfyConf.UserInterface.Console\ConfyConf.UserInterface.Console.csproj", "{93E2FD76-67A2-4991-AD91-5975BF7F8798}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfyConf.Domain.InMemory", "src\ConfyConf.Domain.InMemory\ConfyConf.Domain.InMemory.csproj", "{5549BBC2-E11D-4D8F-ABF7-F7F544B03964}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Impls", "Impls", "{251B4D6E-132B-4D53-83C9-BC794BD8D927}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfyConf.EventHandlers", "src\ConfyConf.EventHandlers\ConfyConf.EventHandlers.csproj", "{172D6033-6B20-4640-9490-C0D97358AE9B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,8 +51,20 @@ Global
 		{93E2FD76-67A2-4991-AD91-5975BF7F8798}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93E2FD76-67A2-4991-AD91-5975BF7F8798}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93E2FD76-67A2-4991-AD91-5975BF7F8798}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5549BBC2-E11D-4D8F-ABF7-F7F544B03964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5549BBC2-E11D-4D8F-ABF7-F7F544B03964}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5549BBC2-E11D-4D8F-ABF7-F7F544B03964}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5549BBC2-E11D-4D8F-ABF7-F7F544B03964}.Release|Any CPU.Build.0 = Release|Any CPU
+		{172D6033-6B20-4640-9490-C0D97358AE9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{172D6033-6B20-4640-9490-C0D97358AE9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{172D6033-6B20-4640-9490-C0D97358AE9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{172D6033-6B20-4640-9490-C0D97358AE9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{93E2FD76-67A2-4991-AD91-5975BF7F8798} = {251B4D6E-132B-4D53-83C9-BC794BD8D927}
+		{5549BBC2-E11D-4D8F-ABF7-F7F544B03964} = {251B4D6E-132B-4D53-83C9-BC794BD8D927}
 	EndGlobalSection
 EndGlobal

@@ -4,7 +4,7 @@ using ConfyConf.Bus;
 using ConfyConf.CommandHandlers;
 using ConfyConf.Commands;
 using ConfyConf.Domain;
-using ConfyConf.EventStore;
+using ConfyConf.Domain.InMemory;
 
 namespace ConfyConf.UserInterface.Console
 {

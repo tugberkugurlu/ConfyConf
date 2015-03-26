@@ -2,7 +2,7 @@
 
 namespace ConfyConf.Domain
 {
-    public class User : IEntity
+    public class User : AggregateRoot
     {
         public User(string id, string name)
         {
@@ -20,7 +20,6 @@ namespace ConfyConf.Domain
             Name = name;
         }
 
-        public string Id { get; private set; }
         public string Name { get; private set; }
     }
 }

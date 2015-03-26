@@ -1,7 +1,6 @@
 ﻿using System;
 using ConfyConf.Commands;
 using ConfyConf.Domain;
-using ConfyConf.EventStore;
 
 namespace ConfyConf.CommandHandlers
 {

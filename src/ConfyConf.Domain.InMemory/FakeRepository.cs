@@ -1,9 +1,8 @@
 ﻿using System.Collections.Concurrent;
-using ConfyConf.Domain;
 
-namespace ConfyConf.EventStore
+namespace ConfyConf.Domain.InMemory
 {
-    public class FakeRepository<TEntity> : IDomainRepository<TEntity> where TEntity : class, IEntity
+    public class FakeRepository<TEntity> : IDomainRepository<TEntity> where TEntity : AggregateRoot
     {
         private static readonly ConcurrentDictionary<string, TEntity> Store = 
             new ConcurrentDictionary<string, TEntity>();

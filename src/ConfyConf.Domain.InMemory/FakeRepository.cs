@@ -4,6 +4,8 @@ namespace ConfyConf.Domain.InMemory
 {
     public class FakeRepository<TEntity> : IDomainRepository<TEntity> where TEntity : AggregateRoot
     {
+        // TODO: Get eventstore here.
+
         private static readonly ConcurrentDictionary<string, TEntity> Store = 
             new ConcurrentDictionary<string, TEntity>();
 

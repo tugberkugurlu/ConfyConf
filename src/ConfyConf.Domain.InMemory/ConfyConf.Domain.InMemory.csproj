@@ -39,10 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FakeEventStore.cs" />
     <Compile Include="FakeRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConfyConf.Bus\ConfyConf.Bus.csproj">
+      <Project>{184b260e-0b73-464f-b577-cc64087896ba}</Project>
+      <Name>ConfyConf.Bus</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConfyConf.Domain\ConfyConf.Domain.csproj">
       <Project>{6ecdff42-4448-4ec9-9aab-d07b3d7a3320}</Project>
       <Name>ConfyConf.Domain</Name>

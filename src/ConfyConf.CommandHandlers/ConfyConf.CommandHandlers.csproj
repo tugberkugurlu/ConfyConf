@@ -53,10 +53,6 @@
       <Project>{6ECDFF42-4448-4EC9-9AAB-D07B3D7A3320}</Project>
       <Name>ConfyConf.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ConfyConf.EventStore\ConfyConf.EventStore.csproj">
-      <Project>{fd22e3f3-613f-4a35-b078-d8e00f8a2d34}</Project>
-      <Name>ConfyConf.EventStore</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

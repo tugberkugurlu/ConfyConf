@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfyConf.Commands", "src\C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfyConf.Bus", "src\ConfyConf.Bus\ConfyConf.Bus.csproj", "{184B260E-0B73-464F-B577-CC64087896BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfyConf.EventStore", "src\ConfyConf.EventStore\ConfyConf.EventStore.csproj", "{FD22E3F3-613F-4A35-B078-D8E00F8A2D34}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfyConf.UserInterface.Console", "src\ConfyConf.UserInterface.Console\ConfyConf.UserInterface.Console.csproj", "{93E2FD76-67A2-4991-AD91-5975BF7F8798}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfyConf.Domain.InMemory", "src\ConfyConf.Domain.InMemory\ConfyConf.Domain.InMemory.csproj", "{5549BBC2-E11D-4D8F-ABF7-F7F544B03964}"
@@ -43,10 +41,6 @@ Global
 		{184B260E-0B73-464F-B577-CC64087896BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{184B260E-0B73-464F-B577-CC64087896BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{184B260E-0B73-464F-B577-CC64087896BA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FD22E3F3-613F-4A35-B078-D8E00F8A2D34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD22E3F3-613F-4A35-B078-D8E00F8A2D34}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FD22E3F3-613F-4A35-B078-D8E00F8A2D34}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FD22E3F3-613F-4A35-B078-D8E00F8A2D34}.Release|Any CPU.Build.0 = Release|Any CPU
 		{93E2FD76-67A2-4991-AD91-5975BF7F8798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{93E2FD76-67A2-4991-AD91-5975BF7F8798}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93E2FD76-67A2-4991-AD91-5975BF7F8798}.Release|Any CPU.ActiveCfg = Release|Any CPU

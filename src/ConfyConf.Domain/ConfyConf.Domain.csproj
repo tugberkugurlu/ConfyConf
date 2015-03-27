@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="AggregateRoot.cs" />
     <Compile Include="Events\IDomainEvent.cs" />
+    <Compile Include="Events\UserCreatedEvent.cs" />
     <Compile Include="IDomainRepository.cs" />
     <Compile Include="IEventStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

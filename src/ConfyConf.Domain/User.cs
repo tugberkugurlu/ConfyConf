@@ -1,4 +1,5 @@
 ﻿using System;
+using ConfyConf.Domain.Events;
 
 namespace ConfyConf.Domain
 {
@@ -18,6 +19,8 @@ namespace ConfyConf.Domain
 
             Id = id;
             Name = name;
+
+            RecordChange(new UserCreatedEvent(id, name));
         }
 
         public string Name { get; private set; }

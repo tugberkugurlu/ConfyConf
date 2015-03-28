@@ -4,14 +4,54 @@ using System.Linq;
 using ConfyConf.Bus;
 using ConfyConf.Domain.Events;
 using MongoDB.Driver;
+using MongoDB.Driver.Builders;
 
 namespace ConfyConf.Domain.MongoDB
 {
-    public class MongoContext
+    public class MongoUpdateGenerator
     {
-        public MongoCollection GetCollection(string aggregateName)
+        private readonly static Dictionary<Type, Func<IDomainEvent, IMongoUpdate>> EventToUpdateMappings = new Dictionary<Type, Func<IDomainEvent, IMongoUpdate>>
         {
-            throw new NotImplementedException();
+        };
+
+        private readonly static Dictionary<Type, Operation> EventTypeToOperationMappings = new Dictionary<Type, Operation>
+        {
+            { typeof(UserCreatedEvent), Operation.Insert }
+        };
+
+        private readonly static Dictionary<Type, Type> EventTypeToAggregateTypeMappings = new Dictionary<Type, Type>
+        {
+            { typeof(UserCreatedEvent), typeof(User) }
+        };
+
+        private bool IsValid(IDomainEvent[] events)
+        {
+            if (events == null)
+            {
+                throw new ArgumentNullException("events");
+            }
+
+            // TODO: Refactor this crap.
+
+            // Rule-1: Cannot handle updates on more than one aggregate at once.
+            // Rule-1: Cannot handle more than one aggregate inserts at once.
+
+            IEnumerable<Type> matchingAggregateTypes = events
+                .Select(@event => EventTypeToAggregateTypeMappings[@event.GetType()])
+                .Distinct();
+
+            bool hasMultipleInserts = events.Select(@event => EventTypeToOperationMappings[@event.GetType()])
+                .Where(operation => operation == Operation.Insert)
+                .Skip(1).Any();
+
+            return (matchingAggregateTypes.Skip(1).Any() == false) &&
+                   (hasMultipleInserts == false);
+        }
+
+        private enum Operation : byte
+        {
+            Insert = 1,
+            Update = 2
         }
     }
 
@@ -67,9 +107,14 @@ namespace ConfyConf.Domain.MongoDB
             }
         }
 
-        private IMongoQuery GenerateUpdateQuery(string aggregateId)
+        public IEnumerable<IDomainEvent> GetEventsForAggregate(string aggregateId)
         {
             throw new NotImplementedException();
+        }
+
+        private IMongoQuery GenerateUpdateQuery(string aggregateId)
+        {
+            return Query.EQ("_id", aggregateId);
         }
 
         private MongoUpdateContext GenerateUpdate(IEnumerable<IDomainEvent> events)
@@ -97,11 +142,6 @@ namespace ConfyConf.Domain.MongoDB
 
                 throw;
             }
-        }
-
-        public IEnumerable<IDomainEvent> GetEventsForAggregate(string aggregateId)
-        {
-            throw new NotImplementedException();
         }
 
         private class MongoUpdateContext

@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Impls", "Impls", "{251B4D6E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfyConf.EventHandlers", "src\ConfyConf.EventHandlers\ConfyConf.EventHandlers.csproj", "{172D6033-6B20-4640-9490-C0D97358AE9B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfyConf.Domain.MongoDB", "src\ConfyConf.Domain.MongoDB\ConfyConf.Domain.MongoDB.csproj", "{A2A487D5-2B19-4EE5-AE67-DF1C3AFA32AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{172D6033-6B20-4640-9490-C0D97358AE9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{172D6033-6B20-4640-9490-C0D97358AE9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{172D6033-6B20-4640-9490-C0D97358AE9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2A487D5-2B19-4EE5-AE67-DF1C3AFA32AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2A487D5-2B19-4EE5-AE67-DF1C3AFA32AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2A487D5-2B19-4EE5-AE67-DF1C3AFA32AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2A487D5-2B19-4EE5-AE67-DF1C3AFA32AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,5 +66,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{93E2FD76-67A2-4991-AD91-5975BF7F8798} = {251B4D6E-132B-4D53-83C9-BC794BD8D927}
 		{5549BBC2-E11D-4D8F-ABF7-F7F544B03964} = {251B4D6E-132B-4D53-83C9-BC794BD8D927}
+		{A2A487D5-2B19-4EE5-AE67-DF1C3AFA32AD} = {251B4D6E-132B-4D53-83C9-BC794BD8D927}
 	EndGlobalSection
 EndGlobal
